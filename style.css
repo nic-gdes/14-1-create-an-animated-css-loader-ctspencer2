@@ -1,0 +1,48 @@
+/* LOADER ADJUSTMENTS */
+body {
+    width: 100vh;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#loader {
+    max-width: 100px;
+    max-height: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* FIRST LOADER */
+#loader-one {
+    width: 100px;
+    animation: loaderSpin 1.5s linear infinite;
+    position: absolute;
+    z-index: 2;
+}
+
+/* SECOND LOADER */
+#loader-two {
+    width: 200px;
+    animation: loaderReverse 1.5s linear infinite;
+    position: absolute;
+    z-index: 1;
+}
+
+/* KEYFRAMES */
+@keyframes loaderSpin {
+    0% {transform: rotate(0deg);}
+    50% {transform: rotate(180deg);}
+    100% {transform: rotate(360deg);}
+}
+
+@keyframes loaderReverse {
+    0% {transform: rotate(0deg);}
+    50% {transform: rotate(-180deg);}
+    100% {transform: rotate(-360deg);} 
+}
+
+
